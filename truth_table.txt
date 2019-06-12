@@ -1,0 +1,36 @@
+input  op5 op4 op3 op2 op1 op0  | RegDst  RegWrite  ALUSrc  MemToReg MemWrite IsBranch ALUOp2 ALUOp1 ALUOp0  Lui Jump JAL JR IMD_TYPE BRANCH_TYPE     Mem_Data_Type  Access_Byte
+addiu   0  0   1   0   0   1    | 0         1         1        0         0       0       0      0       1     0    0   0   0    0
+andi    0  0   1   1   0   0    | 0         1         1        0         0       0       0      1       0     0    0   0   0    0
+ori     0  0   1   1   0   1    | 0         1         1        0         0       0       0      1       1     0    0   0   0    1
+lui     0  0   1   1   1   1    | 0         1         1        0         0       0       1      0       0     1    0   0   0    0
+lb      1  0   0   0   0   0    | 0         1         1        1         0       0       0      0       0     0    0   0   0    0                       0               1
+lbu     1  0   0   1   0   0    | 0         1         1        1         0       0       0      0       0     0    0   0   0    0                       1               1
+lw      1  0   0   0   1   1    | 0         1         1        1         0       0       0      0       0     0    0   0   0    0
+sw      1  0   1   0   1   1    | 0         0         1        x         1       0       0      0       0     0    0   0   0    0
+beq     0  0   0   1   0   0    | x         0         0        x         0       1       x      x       x     0    0   0   0    x       0       
+bnq     0  0   0   1   0   1    | x         0         0        x         0       1       x      x       x     0    0   0   0    x       1
+j       0  0   0   0   1   0    | x         0         x        x         0       x       x      x       x     0    1   0   0    x
+jal     0  0   0   0   1   1    | x         1         x        x         0       x       x      x       x     0    1   1   0    x
+jr      0  0   0   0   0   0    | x         x         x        x         0       x       x      x       x     0    1   0   1    x        (func(08x))
+R-TYPE  0  0   0   0   0   0    | 1         1         0        0         0       0       1      1       1     0    0   0   0    x
+
+RegDst = ^op0 * ^op1 * ^op2 * ^op3 * ^op4 * ^op5
+RegWrite = ^op5 * ^op4 * op3 + op5 * ^op4 * ^op3 + ^op5 * ^op4 * ^op3 * ^op2 * op1 * op0 + ^op5 * ^op4 * ^op3 * ^op2 * ^op1 * ^op0
+ALUSrc = op5 + op3
+MemToReg = op5 * ^op3
+MemWrite = op5 * op3
+IsBranch = ^op5 * ^op4 * ^op3 * op2
+ALUOp2 = op3 * op2 * op1 * op0 + ^op0 * ^op1 * ^op2 * ^op3 * ^op4 * ^op5
+ALUOp1 = op3 * op2 * ^op1 + ^op0 * ^op1 * ^op2 * ^op3 * ^op4 * ^op5
+ALUOp0 = ^op2 * ^op1 * op0 + op3 * op2 * ^op1 * op0 + ^op0 * ^op1 * ^op2 * ^op3 * ^op4 * ^op5
+Lui = op3 * op2 * op1 * op0
+Jump = ^op5 * ^op4 * ^op3 * ^op2 * op1 + func(08x)
+JAL = ^op5 * ^op4 * ^op3 * ^op2 * op1 * op0
+IMD_TYPE = op3 * op2 * ^op1 * op0
+JR = func(08x)
+BRANCH_TYPE = op0
+BranchTake = (BRANCH_TYPE * ^EQUAL + ^BRANCH_TYPE * EQUAL) * IsBranch
+Mem_Data_Type = ^op0 * ^op1 * op2 * ^op3 * ^op4 * op5
+Access_Byte = op5 * ^op4 * ^op3 * ^op1 * ^op0
+
+test pass(addiu, R-TYPE, ori, lui, beq, bnq, j, jr)

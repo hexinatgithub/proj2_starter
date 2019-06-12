@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="2.7.1" version="1.0">
-This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0">
+<project source="2.7.2" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="appear" val="center"/>
     </tool>
@@ -85,57 +86,257 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(250,540)" to="(250,550)"/>
-    <wire from="(190,280)" to="(200,280)"/>
-    <wire from="(190,180)" to="(200,180)"/>
-    <wire from="(190,350)" to="(200,350)"/>
-    <wire from="(770,180)" to="(780,180)"/>
+    <wire from="(470,220)" to="(470,290)"/>
+    <wire from="(1010,190)" to="(1010,200)"/>
+    <wire from="(1000,280)" to="(1000,290)"/>
+    <wire from="(1030,270)" to="(1030,280)"/>
+    <wire from="(790,230)" to="(790,240)"/>
+    <wire from="(800,240)" to="(800,250)"/>
+    <wire from="(810,250)" to="(810,260)"/>
+    <wire from="(820,260)" to="(820,270)"/>
+    <wire from="(190,280)" to="(250,280)"/>
+    <wire from="(210,170)" to="(210,180)"/>
+    <wire from="(720,170)" to="(1040,170)"/>
+    <wire from="(250,330)" to="(560,330)"/>
+    <wire from="(780,270)" to="(820,270)"/>
+    <wire from="(230,190)" to="(230,210)"/>
+    <wire from="(850,270)" to="(850,290)"/>
+    <wire from="(1100,280)" to="(1100,290)"/>
+    <wire from="(700,180)" to="(700,330)"/>
+    <wire from="(250,130)" to="(250,160)"/>
+    <wire from="(310,180)" to="(400,180)"/>
+    <wire from="(490,270)" to="(520,270)"/>
+    <wire from="(780,250)" to="(800,250)"/>
+    <wire from="(780,260)" to="(810,260)"/>
+    <wire from="(570,270)" to="(600,270)"/>
+    <wire from="(980,200)" to="(1010,200)"/>
+    <wire from="(1010,190)" to="(1040,190)"/>
+    <wire from="(1000,280)" to="(1030,280)"/>
+    <wire from="(190,180)" to="(210,180)"/>
+    <wire from="(800,240)" to="(830,240)"/>
+    <wire from="(230,160)" to="(250,160)"/>
+    <wire from="(870,250)" to="(900,250)"/>
+    <wire from="(570,270)" to="(570,320)"/>
+    <wire from="(820,260)" to="(830,260)"/>
+    <wire from="(780,240)" to="(790,240)"/>
+    <wire from="(900,200)" to="(900,250)"/>
+    <wire from="(580,330)" to="(700,330)"/>
+    <wire from="(720,170)" to="(720,180)"/>
+    <wire from="(450,220)" to="(450,230)"/>
     <wire from="(450,540)" to="(450,550)"/>
-    <comp lib="0" loc="(780,180)" name="Pin">
+    <wire from="(510,220)" to="(510,230)"/>
+    <wire from="(250,540)" to="(250,550)"/>
+    <wire from="(720,260)" to="(760,260)"/>
+    <wire from="(790,230)" to="(830,230)"/>
+    <wire from="(900,200)" to="(940,200)"/>
+    <wire from="(720,180)" to="(720,260)"/>
+    <wire from="(230,190)" to="(270,190)"/>
+    <wire from="(230,170)" to="(270,170)"/>
+    <wire from="(1050,200)" to="(1050,220)"/>
+    <wire from="(810,250)" to="(830,250)"/>
+    <wire from="(1070,180)" to="(1150,180)"/>
+    <wire from="(550,270)" to="(570,270)"/>
+    <wire from="(700,180)" to="(720,180)"/>
+    <wire from="(540,180)" to="(700,180)"/>
+    <wire from="(250,130)" to="(270,130)"/>
+    <wire from="(190,350)" to="(210,350)"/>
+    <wire from="(250,280)" to="(250,330)"/>
+    <wire from="(1070,280)" to="(1100,280)"/>
+    <wire from="(490,220)" to="(490,270)"/>
+    <comp lib="0" loc="(600,270)" name="Tunnel">
+      <a name="label" val="MEM_WRITE"/>
+    </comp>
+    <comp lib="0" loc="(190,350)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="ACCESS_BYTE"/>
+    </comp>
+    <comp lib="1" loc="(520,270)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(450,540)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="4" loc="(540,180)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+    </comp>
+    <comp lib="3" loc="(310,180)" name="Subtractor">
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="6" loc="(435,19)" name="Text">
+      <a name="text" val="DO NOT CHANGE THE LOCATIONS OF THE INPUTS/OUTPUTS! IF YOU DO SO, YOU NEED TO MAKE SURE THE PINS ARE AT THE RIGHT PLACE!"/>
+    </comp>
+    <comp lib="1" loc="(1050,220)" name="AND Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="2"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(760,260)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="32"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="2"/>
+      <a name="bit17" val="2"/>
+      <a name="bit18" val="2"/>
+      <a name="bit19" val="2"/>
+      <a name="bit20" val="2"/>
+      <a name="bit21" val="2"/>
+      <a name="bit22" val="2"/>
+      <a name="bit23" val="2"/>
+      <a name="bit24" val="3"/>
+      <a name="bit25" val="3"/>
+      <a name="bit26" val="3"/>
+      <a name="bit27" val="3"/>
+      <a name="bit28" val="3"/>
+      <a name="bit29" val="3"/>
+      <a name="bit30" val="3"/>
+      <a name="bit31" val="3"/>
+    </comp>
+    <comp lib="0" loc="(210,170)" name="Splitter">
+      <a name="incoming" val="32"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="1"/>
+      <a name="bit18" val="1"/>
+      <a name="bit19" val="1"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="1"/>
+      <a name="bit24" val="1"/>
+      <a name="bit25" val="1"/>
+      <a name="bit26" val="none"/>
+      <a name="bit27" val="none"/>
+      <a name="bit28" val="none"/>
+      <a name="bit29" val="none"/>
+      <a name="bit30" val="none"/>
+      <a name="bit31" val="none"/>
+    </comp>
+    <comp lib="0" loc="(470,290)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(980,200)" name="Bit Extender">
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="6" loc="(1223,129)" name="Text">
+      <a name="text" val="This is an OUTPUT to the circuit"/>
+    </comp>
+    <comp lib="6" loc="(339,599)" name="Text">
+      <a name="text" val="These are INPUTS to the circuit"/>
+    </comp>
+    <comp lib="0" loc="(230,210)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="24"/>
+      <a name="value" val="0x4000"/>
+    </comp>
+    <comp lib="2" loc="(870,250)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(103,130)" name="Text">
+      <a name="text" val="These are INPUTS to the circuit"/>
+    </comp>
+    <comp lib="0" loc="(250,540)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="MEM_WRITE"/>
+    </comp>
+    <comp lib="0" loc="(270,130)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="ByteOffset"/>
+    </comp>
+    <comp lib="0" loc="(510,230)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1150,180)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="label" val="Data Mem Out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(190,350)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="ACCESS_BYTE"/>
-    </comp>
-    <comp lib="6" loc="(435,19)" name="Text">
-      <a name="text" val="DO NOT CHANGE THE LOCATIONS OF THE INPUTS/OUTPUTS! IF YOU DO SO, YOU NEED TO MAKE SURE THE PINS ARE AT THE RIGHT PLACE!"/>
-    </comp>
-    <comp lib="0" loc="(190,280)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Data Mem In"/>
-    </comp>
-    <comp lib="0" loc="(190,180)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Data Mem Addr"/>
-    </comp>
-    <comp lib="0" loc="(450,550)" name="Pin">
+    <comp lib="0" loc="(1000,290)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="6" loc="(103,130)" name="Text">
-      <a name="text" val="These are INPUTS to the circuit"/>
-    </comp>
-    <comp lib="6" loc="(339,599)" name="Text">
-      <a name="text" val="These are INPUTS to the circuit"/>
-    </comp>
-    <comp lib="6" loc="(853,129)" name="Text">
-      <a name="text" val="This is an OUTPUT to the circuit"/>
+      <a name="label" val="Access_Byte"/>
     </comp>
     <comp lib="0" loc="(250,550)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
       <a name="label" val="MEM_WRITE"/>
     </comp>
+    <comp lib="1" loc="(580,330)" name="Controlled Buffer">
+      <a name="width" val="32"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1100,290)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="MEM_WRITE"/>
+    </comp>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Data Mem In"/>
+    </comp>
     <comp lib="6" loc="(496,586)" name="Text">
       <a name="text" val="Yet again, the clock is not an actual clock, but an input, one that will be driven from a higher circuit"/>
+    </comp>
+    <comp lib="0" loc="(450,230)" name="Constant">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(850,290)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="label" val="ByteOffset"/>
+    </comp>
+    <comp lib="0" loc="(210,350)" name="Tunnel">
+      <a name="label" val="Access_Byte"/>
+    </comp>
+    <comp lib="0" loc="(450,550)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Data Mem Addr"/>
+    </comp>
+    <comp lib="2" loc="(1070,180)" name="Multiplexer">
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
     </comp>
   </circuit>
 </project>
